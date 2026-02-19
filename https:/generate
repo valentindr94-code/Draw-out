@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     const r = await fetch("https://api.sunoapi.org/v1/generate", {
       method: "POST",
       headers: {
-        "Authorization": "Bearer 6a8c1e88bc4db214d87b786d94d9fd2f",
+        "Authorization": `Bearer ${process.env.SUNO_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ prompt }),
